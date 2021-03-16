@@ -13,7 +13,7 @@ public class ArticleDto {
 
     private Integer id;
 
-    private  String codeArticle;
+    private String codeArticle;
 
     private String designation;
 
@@ -30,7 +30,7 @@ public class ArticleDto {
     private Integer idEntreprise;
 
     public static ArticleDto fromEntity(Article article) {
-        if ( article == null){
+        if (article == null) {
             return null;
         }
         return ArticleDto.builder()
@@ -46,9 +46,9 @@ public class ArticleDto {
                 .build();
     }
 
-    public static Article toEntity(ArticleDto articleDto){
+    public static Article toEntity(ArticleDto articleDto) {
 
-        if(articleDto == null){
+        if (articleDto == null) {
             return null;
         }
         Article article = new Article();

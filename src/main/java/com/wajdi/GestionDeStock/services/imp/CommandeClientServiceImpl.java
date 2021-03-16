@@ -101,7 +101,7 @@ public class CommandeClientServiceImpl implements CommandeClientService {
         if (!StringUtils.hasLength(code)) {
             log.error("le code de la commande est null");
         }
-        return commandeClientRepository.findByCommandeClientByCode(code)
+        return commandeClientRepository.findCommandeClientByCode(code)
                 .map(CommandeClientDto::fromEntity)
                 .orElseThrow(() -> new EntityNotFoundException("la commande client avec le code :" + code + "n'est pas trouve", ErrorCodes.COMMANDE_CLIENT_NOT_FOUND));
     }

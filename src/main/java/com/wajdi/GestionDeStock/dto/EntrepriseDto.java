@@ -1,7 +1,9 @@
 package com.wajdi.GestionDeStock.dto;
+
 import com.wajdi.GestionDeStock.model.Entreprise;
 import lombok.Builder;
 import lombok.Data;
+
 import java.util.List;
 
 @Data
@@ -29,7 +31,7 @@ public class EntrepriseDto {
     private List<UtilisateurDto> utilisateurs;
 
     public static EntrepriseDto fromEntity(Entreprise entreprise) {
-        if (entreprise == null){
+        if (entreprise == null) {
             return null;
         }
 
@@ -45,8 +47,8 @@ public class EntrepriseDto {
                 .build();
     }
 
-    public static Entreprise toEntity(EntrepriseDto entrepriseDto){
-        if (entrepriseDto == null){
+    public static Entreprise toEntity(EntrepriseDto entrepriseDto) {
+        if (entrepriseDto == null) {
             return null;
         }
         Entreprise entreprise = new Entreprise();

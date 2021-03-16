@@ -1,9 +1,7 @@
 package com.wajdi.GestionDeStock.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.wajdi.GestionDeStock.model.Adresse;
 import com.wajdi.GestionDeStock.model.Client;
-import com.wajdi.GestionDeStock.model.CommandeClient;
 import lombok.Builder;
 import lombok.Data;
 
@@ -12,7 +10,7 @@ import java.util.List;
 
 @Data
 @Builder
-public class ClientDto{
+public class ClientDto {
 
     private Integer id;
 
@@ -23,7 +21,7 @@ public class ClientDto{
     @Embedded
     private AdresseDto adresse;
 
-    private  String photo;
+    private String photo;
 
     private String mail;
 
@@ -33,7 +31,7 @@ public class ClientDto{
     private List<CommandeClientDto> commandeCLients;
 
     public static ClientDto fromEntity(Client client) {
-        if (client == null){
+        if (client == null) {
             return null;
         }
         return ClientDto.builder()
@@ -46,8 +44,9 @@ public class ClientDto{
                 .numTel(client.getNumTel())
                 .build();
     }
-    public static  Client toEntity(ClientDto clientDto){
-        if (clientDto == null){
+
+    public static Client toEntity(ClientDto clientDto) {
+        if (clientDto == null) {
             return null;
         }
         Client client = new Client();

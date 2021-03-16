@@ -60,7 +60,7 @@ public class EntrepriseServiceImpl implements EntrepriseService {
     }
 
     @Override
-    public void deleteById(Integer id) {
+    public void delete(Integer id) {
         if (id == null) {
             log.error("l'id est null");
             return;

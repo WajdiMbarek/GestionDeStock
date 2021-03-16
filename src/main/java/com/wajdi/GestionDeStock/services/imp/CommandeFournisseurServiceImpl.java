@@ -100,7 +100,7 @@ public class CommandeFournisseurServiceImpl implements CommandeFournisseurServic
         if (!StringUtils.hasLength(code)) {
             log.error("le code de la commande est null");
         }
-        return commandeFournisseurRepository.findByCommandeFournisseurByCode(code)
+        return commandeFournisseurRepository.findCommandeFournisseurByCode(code)
                 .map(CommandeFournisseurDto::fromEntity)
                 .orElseThrow(() -> new EntityNotFoundException("la commande fournisseur avec le code :" + code + "n'est pas trouve", ErrorCodes.COMMANDE_FOURNISSEUR_NOT_FOUND));
     }

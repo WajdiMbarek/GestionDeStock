@@ -1,13 +1,15 @@
 package com.wajdi.GestionDeStock.dto;
+
 import com.wajdi.GestionDeStock.model.CommandeFournisseur;
 import lombok.Builder;
 import lombok.Data;
+
 import java.time.Instant;
 import java.util.List;
 
 @Data
 @Builder
-public class CommandeFournisseurDto{
+public class CommandeFournisseurDto {
 
     private Integer id;
 
@@ -20,7 +22,7 @@ public class CommandeFournisseurDto{
     private List<LigneCommandeFournisseurDto> ligneCommandeFournisseurs;
 
     public static CommandeFournisseurDto fromEntity(CommandeFournisseur commandeFournisseur) {
-        if (commandeFournisseur == null){
+        if (commandeFournisseur == null) {
             return null;
         }
 
@@ -31,8 +33,8 @@ public class CommandeFournisseurDto{
                 .build();
     }
 
-    public static CommandeFournisseur toEntity(CommandeFournisseurDto commandeFournisseurDto){
-        if (commandeFournisseurDto == null){
+    public static CommandeFournisseur toEntity(CommandeFournisseurDto commandeFournisseurDto) {
+        if (commandeFournisseurDto == null) {
             return null;
         }
         CommandeFournisseur commandeFournisseur = new CommandeFournisseur();
