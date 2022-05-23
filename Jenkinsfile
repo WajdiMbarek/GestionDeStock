@@ -14,7 +14,11 @@ pipeline {
             steps {
                 echo 'This is a minimal pipeline.'
             }
-        }
+        
+	}
+	stage ('notification') {
+ 	ech 'notfication'
+	}
     }
 }
 
